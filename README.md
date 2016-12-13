@@ -38,8 +38,8 @@ var connection = R.Connection()
 
 if (connection.Open) 
 {
-    RepositoryManager.InitializeRepositories(connection);
-    var userRepository = RepositoryManager.GetRepository<UserRepository>();
+    RepositoryManager.Initialize(connection);
+    var userRepository = RepositoryManager.Get<UserRepository>();
 
     User user = userRepository.Insert(new User("johndoe"));
     user.Username = "ehehe";
