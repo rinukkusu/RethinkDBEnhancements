@@ -10,7 +10,7 @@ namespace RethinkDBEnhancements
 	{
 		public static IDictionary<Type, IRethinkDbRepository> Repositories = new Dictionary<Type, IRethinkDbRepository>();
 
-		public static void InitializeRepositories(IConnection connection)
+		public static void Initialize(IConnection connection)
 		{
 			List<Type> types = Assembly.GetEntryAssembly()
 				.GetTypes()
@@ -24,8 +24,11 @@ namespace RethinkDBEnhancements
 			}
 		}
 
-		public static T GetRepository<T>() where T : class
+		public static T Get<T>() where T : class
 		{
+			if (!Repositories.ContainsKey(typeof(T)))
+				throw new Exception($"No repository initialized for {typeof(T).Name}");
+
 			return Repositories[typeof(T)] as T;
 		}
 	}
