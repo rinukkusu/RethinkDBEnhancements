@@ -19,7 +19,7 @@ public class User : Document
 
     public User(string username)
     {
-      Username = username;
+        Username = username;
     }
 }
 ```
