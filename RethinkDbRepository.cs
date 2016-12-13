@@ -4,6 +4,7 @@ using System.Reflection;
 using RethinkDb.Driver;
 using RethinkDb.Driver.Ast;
 using RethinkDb.Driver.Net;
+using RethinkDBEnhancements.Attributes;
 
 namespace RethinkDBEnhancements
 {
