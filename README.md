@@ -1,4 +1,4 @@
-# RethinkDBEnhancements
+# RethinkDBEnhancements [![Build Status](https://travis-ci.org/rinukkusu/RethinkDBEnhancements.svg?branch=master)](https://travis-ci.org/rinukkusu/RethinkDBEnhancements)
 
 ## Subclassing
 ```cs
