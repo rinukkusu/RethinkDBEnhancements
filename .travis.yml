@@ -1,5 +1,5 @@
 language: csharp
-solution: travis-mono-test.sln
+solution: RethinkDBEnhancements.sln
 
 matrix:
   include:
@@ -21,4 +21,4 @@ notifications:
     on_failure: always
 
 script:
-  - mkdir build && cd build && dotnet new && time dotnet restore && dotnet run; fi
+  - mkdir build && cd build && dotnet new && time dotnet restore && dotnet run
